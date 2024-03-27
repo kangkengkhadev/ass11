@@ -1,4 +1,4 @@
-interface HospitalItem {
+export interface HospitalItem {
     _id: string,
     name: string,
     address: string,
@@ -9,11 +9,32 @@ interface HospitalItem {
     picture: string,
     __v: number,
     id: string
-  }
+}
+
+export interface BookingItem {
+  name: string,
+  surname: string,
+  id: string,
+  hospital: string,
+  bookDate: string
+}
   
-  interface HospitalJson {
+export interface HospitalJson {
     success: boolean,
     count: number,
     pagination: Object,
     data: HospitalItem[]
+}
+
+export interface UserJson {
+  success: boolean,
+  data: {
+    _id: string,
+    name: string,
+    email: string,
+    tel: string,
+    role: string,
+    createdAt: string,
+    __v: number
   }
+}
